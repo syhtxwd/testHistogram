@@ -127,14 +127,26 @@ void HistogramBaseWidget::paintEvent(QPaintEvent *event)
     for(auto iter = m_dataMap.begin(); iter != m_dataMap.end(); iter++, j++)
     {
         if(iter.value().size() == 1)
-            paint.setBrush(m_colorList.at(j));
+        {
+            if(j >= m_colorList.size())
+                paint.setBrush(QColor(qrand() % 255, qrand() % 255, qrand() % 255));
+            else
+                paint.setBrush(m_colorList.at(j));
+        }
         num = 0;
         for(int i = 0; i < iter.value().size(); i++)
         {
             if(m_margin + j * (m_space + m_columnarWidth) > this->width() - m_margin - m_margin - 0.5 * temp)
                 break;
             if(iter.value().size() > 1)
-                paint.setBrush(m_colorList.at(i));
+            {
+                if(i >= m_colorList.size())
+                {
+                    paint.setBrush(QColor(qrand() % 255, qrand() % 255, qrand() % 255));
+                }
+                else
+                    paint.setBrush(m_colorList.at(i));
+            }
 
             paint.drawRect(m_margin + j * (m_space + m_columnarWidth), this->height() - m_margin - num\
                            , m_columnarWidth, 0 - iter.value().at(i).toInt());

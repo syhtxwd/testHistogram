@@ -18,8 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     QList<QColor> m_colorList;
-    m_colorList << QColor(Qt::blue) << QColor(Qt::red) << QColor(Qt::yellow)\
-                << QColor(Qt::gray) << QColor(Qt::blue) << QColor(Qt::red);
+    m_colorList << QColor(Qt::blue) << QColor(Qt::red) << QColor(Qt::yellow);  //\
+    //<< QColor(Qt::gray) << QColor(Qt::blue) << QColor(Qt::red);
     m_HisWidget->SetDataColorList(m_colorList);
 
 
