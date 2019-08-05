@@ -9,66 +9,62 @@ HistogramBaseWidget::HistogramBaseWidget(QWidget * parent  ):
     m_font.setPointSize(8);
     m_font.setLetterSpacing(QFont::AbsoluteSpacing, 2);
 }
-bool HistogramBaseWidget::OninitData(const QMap<QString, QStringList> & m_dataMap)
+void HistogramBaseWidget::OninitData(const QMap<QString, QStringList> & m_dataMap)
 {
     this->m_dataMap = m_dataMap;
 }
 
-bool HistogramBaseWidget::SetTitle( QString  title)
+void HistogramBaseWidget::SetTitle( QString  title)
 {
     this->m_title = title;
-    qDebug() << m_title;
-    return true;
 }
-bool HistogramBaseWidget::SetHoriTitle( QString horiTitle)
+void HistogramBaseWidget::SetHoriTitle( QString horiTitle)
 {
     this->m_horiTitle = horiTitle;
-    return true;
 }
-bool HistogramBaseWidget::SetVeriTitle( QString veriTitle)
+void HistogramBaseWidget::SetVeriTitle( QString veriTitle)
 {
     this->m_veriTitle = veriTitle;
-    return true;
 }
-bool HistogramBaseWidget::SetDataColorList(const QList<QColor> &m_colorList)
+void HistogramBaseWidget::SetDataColorList(const QList<QColor> &m_colorList)
 {
     this->m_colorList = m_colorList;
 }
-bool HistogramBaseWidget::SetVeriColor( QColor m_veriColor)
+void HistogramBaseWidget::SetVeriColor( QColor m_veriColor)
 {
     this->m_veriColor = m_veriColor;
 }
-bool HistogramBaseWidget::SetHoriColor( QColor m_horiColor)
+void HistogramBaseWidget::SetHoriColor( QColor m_horiColor)
 {
     this->m_horiColor = m_horiColor;
 }
-bool HistogramBaseWidget::SetVeriColumnarInterval(const int m_space)
+void HistogramBaseWidget::SetVeriColumnarInterval(const int m_space)
 {
     this->m_space = m_space;
 }
-bool HistogramBaseWidget::SetVerticalScale(const int m_verticalScale,  int m_verticalStartScale )
+void HistogramBaseWidget::SetVerticalScale(const int m_verticalScale,  int m_verticalStartScale )
 {
     this->m_verticalScale = m_verticalScale;
     this->m_verticalStartScale = m_verticalStartScale;
 }
-bool HistogramBaseWidget::SetVerticalScaleToPixel( int m_verticalToPixel)
+void HistogramBaseWidget::SetVerticalScaleToPixel( int m_verticalToPixel)
 {
     this->m_verticalToPixel = m_verticalToPixel;
 }
-bool HistogramBaseWidget::SetHoricalWidth(const int m_columnarWidth)
+void HistogramBaseWidget::SetHoricalWidth(const int m_columnarWidth)
 {
     this->m_columnarWidth = m_columnarWidth;
 }
 
-bool HistogramBaseWidget::SetChartMargin(const int m_margin )
+void HistogramBaseWidget::SetChartMargin(const int m_margin )
 {
     this->m_margin = m_margin;
 }
-bool HistogramBaseWidget::SetCoordinateFont(const QFont &m_font)
+void HistogramBaseWidget::SetCoordinateFont(const QFont &m_font)
 {
     this->m_font = m_font;
 }
-bool HistogramBaseWidget::SetHorizonScaleValue(const QStringList &m_horizonlist)
+void HistogramBaseWidget::SetHorizonScaleValue(const QStringList &m_horizonlist)
 {
     this->m_horizonlist = m_horizonlist;
 }
